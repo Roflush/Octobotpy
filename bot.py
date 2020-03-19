@@ -14,7 +14,7 @@ def get_prefixes(bot, message):
     return commands.when_mentioned_or(*prefixes)(bot, message)
 
 
-initial_extensions = [ 'cogs.socal', 
+initial_extensions = [ 'cogs.social', 
                         'cogs.math', ]
 
 

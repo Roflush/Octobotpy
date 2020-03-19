@@ -2,12 +2,13 @@ import discord
 from discord.ext import commands
 import random
 
-class SocalCog(commands.Cog):
+class socialCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command(name='halpme', aliases=['halp','saveme','askingforafriend'])
     async def SaveMe(self, ctx):
+        '''Displays an embed of suicide hotlines.'''
 
         embed=discord.Embed(title="Talk To Someone Now.", url="https://en.wikipedia.org/wiki/List_of_suicide_crisis_lines", description="If you're thinking about suicide, are worried about a friend or loved one, or would like emotional support reach out. We can help!", color=0x69daf1)
         embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRP4jCxJ-g401sKfcfa0B-sDVFG0y42ZmzEco0iO3KHDeguLkmi")
@@ -25,7 +26,7 @@ class SocalCog(commands.Cog):
         '''Are you cool?'''
         await ctx.send("Your not cool fam.")
  
-    @commands.command(name='clean', aliases='remove', pass_context=True)
+    @commands.command(name='clean', aliases=['remove'], pass_context=True)
     @commands.has_permissions(administrator=True)
     async def clean(ctx, limit: int):
         """Cleans out a textchat of trash."""
@@ -39,10 +40,10 @@ class SocalCog(commands.Cog):
 
     @commands.command(name='repeat')
     async def repeat(ctx, times: int, content='repeating...'):
-    """Repeats a message multiple times."""
-    for i in range(times):
-        await ctx.send(content)
+        """Repeats a message multiple times."""
+        for i in range(times):
+            await ctx.send(content)
 
 
 def setup(bot):
-    bot.add_cog(SocalCog(bot))
+    bot.add_cog(socialCog(bot))
