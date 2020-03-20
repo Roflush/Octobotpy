@@ -44,6 +44,24 @@ class socialCog(commands.Cog):
         for i in range(times):
             await ctx.send(content)
 
+    @commands.command(name='roll')
+    async def dice(self, ctx):
+        """Rolls a dice in NdN format."""
+        try:
+            rolls, limit = map(int, dice.split('d'))
+        except Exception:
+            await ctx.send('Format has to be in NdN!')
+            return
+
+        result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+        await ctx.send(result)
+
+    @commands.command(name='choose')
+    async def choose(self, ctx, *choices: str):
+        '''When you want to pick something at random'''
+        
+        await ctx.send(random.choice(choices))
+
 
 def setup(bot):
     bot.add_cog(socialCog(bot))
