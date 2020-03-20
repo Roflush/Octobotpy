@@ -3,7 +3,7 @@ from discord.ext import commands
 
 import sys, traceback
 
-get_token = open('token.txt', 'r').read()
+#get_token = open('token.txt', 'r').read()
 
 def get_prefixes(bot, message):
     prefixes = ['.', '?']
@@ -14,7 +14,7 @@ def get_prefixes(bot, message):
     return commands.when_mentioned_or(*prefixes)(bot, message)
 
 
-initial_extensions = [ 'cogs.socal', 
+initial_extensions = [ 'cogs.social', 
                         'cogs.math', ]
 
 
@@ -32,4 +32,4 @@ async def on_ready():
     print(f'Successfully logged in and booted...!')
 
 
-bot.run(get_token, bot=True, reconnect=True)
+bot.run("get_token", bot=True, reconnect=True)
