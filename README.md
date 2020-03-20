@@ -1,4 +1,6 @@
 # Octobot with cog support.
+[![roflush](https://circleci.com/gh/Roflush/Octobotpy.svg?style=shield)]([https://app.circleci.com/pipelines/github/Roflush/Octobotpy])  ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/Roflush/Octobotpy)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/roflush/Octobotpy)
+
 Octobot is side project of mine. I wanted to build a bot that used a Python multi file program..
 
 ## Noitce 
@@ -6,7 +8,7 @@ This is not aimed to a be a solution to anyones needs for a discordbot, with thi
 
 ### Adding Commits 
 Feel free to add anything to this project you want, basically if passes CI it will probably make it in. 
-Just to follow PEP8 (I never do, but don't follow me). Other then that I really don't care.
+Just to follow PEP8 (I never do, but don't follow me).  Other then that I really don't care.
 
 #### Commands 
 - math.
