@@ -1,5 +1,5 @@
 # Octobot with cog support.
-[![roflush](https://circleci.com/gh/Roflush/Octobotpy.svg?style=shield)]([https://app.circleci.com/pipelines/github/Roflush/Octobotpy])  ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/Roflush/Octobotpy)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/roflush/Octobotpy)
+[![roflush](https://circleci.com/gh/Roflush/Octobotpy.svg?style=shield)]([https://app.circleci.com/pipelines/github/Roflush/Octobotpy])  ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/Roflush/Octobotpy) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Roflush/Octobotpy)
 
 Octobot is side project of mine. I wanted to build a bot that used a Python multi file program..
 
