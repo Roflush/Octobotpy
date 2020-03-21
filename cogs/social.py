@@ -8,6 +8,7 @@ class socialCog(commands.Cog):
 
     @commands.command(name='halpme', aliases=['halp','saveme','askingforafriend'])
     async def SaveMe(self, ctx):
+
         '''Displays an embed of suicide hotlines.'''
 
         embed=discord.Embed(title="Talk To Someone Now.", url="https://en.wikipedia.org/wiki/List_of_suicide_crisis_lines", description="If you're thinking about suicide, are worried about a friend or loved one, or would like emotional support reach out. We can help!", color=0x69daf1)
@@ -17,35 +18,42 @@ class socialCog(commands.Cog):
         embed.add_field(name=" Veterans Crisis Line", value="1-800-273-8255 and press 1", inline=True)
         embed.add_field(name="Veterans Crisis Line text ", value="838255", inline=True)
         embed.add_field(name="IMAlive Crisis Chatine", value="imalive.org", inline=False)
-        embed.set_footer(text="RoFlush")
+        embed.set_footer(text="RoFlush - I spoke up will you?")
 
         await ctx.send(embed=embed)
     
     @commands.command(name='cool')
     async def coolfams(self, ctx):
+
         '''Are you cool?'''
+
         await ctx.send("Your not cool fam.")
  
     @commands.command(name='clean', aliases=['remove'], pass_context=True)
     @commands.has_permissions(administrator=True)
-    async def clean(ctx, limit: int):
+    async def clean(self, ctx, limit: int):
+
         """Cleans out a textchat of trash."""
+
         await ctx.channel.purge(limit=limit)
         await ctx.send('Cleared by {}'.format(ctx.author.mention))
 
     @clean.error
-    async def clear_error(ctx, error):
+    async def clear_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
             await ctx.send("You cant do that!")
 
     @commands.command(name='repeat')
-    async def repeat(ctx, times: int, content='repeating...'):
+    async def repeat(self, ctx, times: int, *content: str):
+
         """Repeats a message multiple times."""
+
         for i in range(times):
             await ctx.send(content)
 
     @commands.command(name='roll')
-    async def dice(self, ctx):
+    async def dice(self, ctx, dice: str):
+
         """Rolls a dice in NdN format."""
         try:
             rolls, limit = map(int, dice.split('d'))
@@ -56,8 +64,11 @@ class socialCog(commands.Cog):
         result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
         await ctx.send(result)
 
+
+
     @commands.command(name='choose')
     async def choose(self, ctx, *choices: str):
+
         '''When you want to pick something at random'''
         
         await ctx.send(random.choice(choices))
