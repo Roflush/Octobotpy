@@ -3,6 +3,9 @@ from discord.ext import commands
 import random
 
 class socialCog(commands.Cog):
+
+    '''All the social commands'''
+
     def __init__(self, bot):
         self.bot = bot
 
@@ -66,7 +69,7 @@ class socialCog(commands.Cog):
 
 
 
-    @commands.command(name='choose')
+    @commands.command(name='choose', aliases=['pick'])
     async def choose(self, ctx, *choices: str):
 
         '''When you want to pick something at random'''

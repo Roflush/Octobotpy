@@ -3,6 +3,9 @@ from discord.ext import commands
 
 
 class MathCog(commands.Cog):
+
+    '''All of the math commands'''
+
     def __init__(self, bot):
         self.bot = bot
 

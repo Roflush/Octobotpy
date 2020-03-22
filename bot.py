@@ -15,7 +15,8 @@ def get_prefixes(bot, message):
 
 
 initial_extensions = [ 'cogs.social', 
-                        'cogs.math', ]
+                        'cogs.math', 
+                        'cogs.dev']
 
 
 bot = commands.Bot(command_prefix=get_prefixes, description='needs help')
